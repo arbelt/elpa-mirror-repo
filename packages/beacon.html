@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+  <title>GNU ELPA - beacon</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<h1 align="center">GNU ELPA - beacon</h1>
+<p>Description: Highlight the cursor whenever the window scrolls</p>
+<p>Latest: <a href="beacon-1.0.el">beacon-1.0.el</a>, 2016-Feb-19, 18.6kB</p>
+<p>Home page: <a href="https://github.com/Malabarba/beacon">https://github.com/Malabarba/beacon</a></p>
+<p>Browse ELPA's repository: <a href="http://git.savannah.gnu.org/cgit/emacs/elpa.git/tree/packages/beacon">CGit</a> or <a href="http://git.savannah.gnu.org/gitweb/?p=emacs/elpa.git;a=tree;f=packages/beacon">Gitweb</a></p>
+<h2>Full description</h2><pre>
+#+TITLE: Beacon --- Never lose your cursor again
+
+This is a global minor-mode.  Turn it on everywhere with:
+#+BEGIN_SRC emacs-lisp
+(beacon-mode 1)
+#+END_SRC
+
+[[file:example-beacon.gif]]
+
+Whenever the window scrolls a light will shine on top of your cursor
+so you know where it is.
+
+That’s it.
+
+** Customizations
+
+- The appearance of the beacon is configured by ~beacon-size~ and
+  ~beacon-color~.
+
+- The duration is configured by ~beacon-blink-duration~ and
+  ~beacon-blink-delay~.
+
+- To customize /when/ the beacon should blink at all, configure
+  ~beacon-blink-when-window-scrolls~,
+  ~beacon-blink-when-window-changes~, and
+  ~beacon-blink-when-point-moves~.
+
+- To prevent the beacon from blinking only on specific situations
+  configure ~beacon-dont-blink-major-modes~,
+  ~beacon-dont-blink-predicates~, or ~beacon-dont-blink-commands~. You
+  can also disable it only in specific buffers by doing
+  ~(setq-local beacon-mode nil)~.
+
+- Beacon can also push the mark for you whenever point moves a long
+  distance. For this, configure ~beacon-push-mark~.
+
+** Contributors
+
+- [[https://github.com/tsdh][Tassilo Horn]]
+
+If you’d like to help too, just open a PR.
+
+</pre>
+</body>
